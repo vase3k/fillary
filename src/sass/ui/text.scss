@@ -1,0 +1,22 @@
+@use '/src/sass/base/mixins.scss' as *;
+@use '/src/sass/base/variables.scss' as *;
+
+.text-1 {
+    @include text;
+}
+
+.text-2 {
+    @include text;
+    color: $blue-light;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 34px;
+}
+
+.text-3 {
+    @include text;
+    color: $lavender;
+    font-size: 14px;
+    line-height: 28px;
+    opacity: 0.7;
+}

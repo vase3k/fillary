@@ -1,10 +1,46 @@
 @use '/src/sass/base/mixins.scss' as *;
 @use '/src/sass/base/variables.scss' as *;
 
-.btn-defalt {
-    @include button;
-    font-size: 20px;
-    width: 230px;
-    height: 50px;
+.button-table {
+    @include button-table;
 }
-            
+
+.button-table_active {
+    @include button-table;
+    background: $golden-active;
+}
+
+.button-reserve {
+    @include button-reserve;
+}
+
+.button-reserve-active {
+    background: $amber;
+}
+
+.button-telegram {
+    @include button-circle;
+}
+
+.button-telegram-active {
+    @include button-circle;
+    border: none;
+    background-color: $amber;
+}
+
+.button-menu-burger {
+    @include button-circle;
+}
+
+.button-swiper {
+    @include button-swiper;
+}
+
+.button-swiper-active {
+    @include button-swiper;
+    background-color: $golden;
+}
+
+.button-swiper-active_prev {
+    transform: rotate(180deg);
+}

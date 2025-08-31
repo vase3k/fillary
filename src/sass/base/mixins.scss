@@ -1,18 +1,74 @@
 @use '/src/sass/base/variables.scss' as *;
 
 @mixin title {
-    color: $dark;
-    font-weight: 500;
+    color: $sky-light;
+    font-family: 'Forum', sans-serif;
+    font-size: 108px;
+    font-style: normal;
+    font-weight: 400;
     line-height: normal;
+    letter-spacing: 11px;
     text-transform: uppercase;
-    text-align: center;
 }
 
-@mixin button {
-width: 200px;
-height: 50px;
-padding: 5px 10px;
-background-color: brown;
-color: black;
+@mixin text {
+    color: $gold-soft;
+    font-family: Onest;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
 }
-            
+
+@mixin button-table {
+    display: inline-flex;
+    padding: 40px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    background-color: $golden;
+    color: $dark-brown;
+    text-align: center;
+    font-family: Onest;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+@mixin button-reserve {
+    display: flex;
+    width: 200px;
+    height: 70px;
+    padding: 30px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    border: 2px solid $amber;
+    color: $white;
+    text-align: center;
+    font-family: Onest;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+@mixin button-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: $amber;
+}
+
+@mixin button-swiper {
+    @include button-circle;
+    width: 75px;
+    height: 75px;
+}

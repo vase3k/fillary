@@ -41,11 +41,11 @@ export default defineConfig({
             img: '/images/meta-og-image.jpg',
             color: '#ffffff',
         }),
-        createFoldersPlugin(),
-        createFiles(),
-        legacy({
-            targets: ['defaults'],
-        }),
+        //createFoldersPlugin(),
+        //createFiles(),
+        // legacy({
+        //     targets: ['defaults'],
+        // }),
     ],
 });
 
@@ -103,6 +103,18 @@ function createFiles() {
                 if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
                 if (!existsSync(filePath)) writeFileSync(filePath, content);
             };
+            makeFile(
+                join(rootDir, 'src/sass/utils/validations.scss'),
+                `@use '/src/sass/base/variables.scss' as *;
+                `
+            );
+
+            makeFile(
+                join(rootDir, 'src/sass/ui/text.scss'),
+                `@use '/src/sass/base/mixins.scss' as *;
+@use '/src/sass/base/variables.scss' as *;
+                `
+            );
 
             makeFile(
                 join(rootDir, 'src/sass/ui/buttons.scss'),
