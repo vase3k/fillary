@@ -4,6 +4,9 @@ import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
     {
+        rules: {
+            'no-unused-vars': 'off',
+        },
         files: ['**/*.{js,mjs,cjs}'],
         plugins: { js },
         extends: ['js/recommended'],
@@ -15,4 +18,3 @@ export default defineConfig([
         },
     },
 ]);
-        
