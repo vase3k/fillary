@@ -7,6 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import legacy from '@vitejs/plugin-legacy';
 import { webfontDownload } from 'vite-plugin-webfont-dl';
+import { meta } from 'vite-plugin-meta-tags';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const baseName = `/${path.basename(process.cwd())}/`;
@@ -32,9 +33,16 @@ export default defineConfig({
                 assetsSubfolder: 'fonts',
             }
         ),
-
-        //createFoldersPlugin(),
-        //createFiles(),
+        meta({
+            title: 'Fillary',
+            description:
+                'Магическое пространство, наполненное музыкой, любимыми песнями и жаркими танцами',
+            url: 'https://fillary.by/',
+            img: '/images/meta-og-image.jpg',
+            color: '#ffffff',
+        }),
+        createFoldersPlugin(),
+        createFiles(),
         legacy({
             targets: ['defaults'],
         }),
@@ -44,6 +52,7 @@ export default defineConfig({
 //create folders
 function createFoldersPlugin(
     folders = [
+        'public/images',
         'src/img/slider',
         'src/img/form',
         'src/img/tabs',
@@ -402,6 +411,9 @@ import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
     {
+        rules: {
+                    'no-unused-vars': 'off',
+                },
         files: ['**/*.{js,mjs,cjs}'],
         plugins: { js },
         extends: ['js/recommended'],
