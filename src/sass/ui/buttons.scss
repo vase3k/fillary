@@ -3,29 +3,27 @@
 
 .button-table {
     @include button-table;
-}
-
-.button-table_active {
-    @include button-table;
-    background: $golden-active;
+    &:hover,
+    &:active {
+        background: $golden-active;
+    }
 }
 
 .button-reserve {
     @include button-reserve;
-}
-
-.button-reserve-active {
-    background: $amber;
+    &:hover,
+    &:active {
+        background: $amber;
+    }
 }
 
 .button-social {
     @include button-circle;
-}
-
-.button-social_active {
-    @include button-circle;
-    border: none;
-    background-color: $amber;
+    &:active,
+    &:hover {
+        border: none;
+        background-color: $amber;
+    }
 }
 
 .button-menu-burger {
