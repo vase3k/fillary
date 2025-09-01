@@ -1,7 +1,5 @@
 'use strict';
 
-//import tabs from './modules/tabs';
+import '/src/js/modules/swiper';
 
-window.addEventListener('DOMContentLoaded', async () => {
-    //tabs();
-});
+window.addEventListener('DOMContentLoaded', async () => {});

@@ -1,0 +1,44 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.swiper {
+    margin-top: 75px;
+    max-width: 1920px;
+    height: 490px;
+    overflow: hidden;
+    position: relative;
+}
+.swiper-slide {
+    max-width: 840px;
+    transition: transform 0.3s, opacity 0.3s;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 35px;
+    }
+}
+.swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.15;
+}
+
+.button-swiper {
+    background: url('/src/icons/swiper-arrow.svg') $amber center no-repeat;
+}
+
+.custom-prev,
+.custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.custom-next {
+    right: 10px;
+}
+
+.custom-prev {
+    transform: translateY(-50%) rotate(180deg);
+    left: 10px;
+}

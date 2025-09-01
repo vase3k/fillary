@@ -1,0 +1,50 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.promo {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, transparent 21%),
+        linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 21%),
+        url('/src/img/promo/promo-bg-blur.png') center/1920px no-repeat;
+
+    &__title {
+        max-width: 681px;
+        color: $sky-light;
+        text-align: center;
+        font-size: 59px;
+        line-height: 70px;
+        text-transform: uppercase;
+    }
+    &__descr {
+        margin-top: 102px;
+        max-width: 1174px;
+        color: $sky-light;
+        text-align: center;
+        font-size: 40px;
+        line-height: 50px;
+        text-transform: uppercase;
+        span {
+            color: $golden;
+        }
+    }
+    &__text {
+        margin-top: 35px;
+        color: $blue-light;
+        text-align: center;
+        font-family: Onest;
+        font-size: 22px;
+        font-weight: 500;
+        span {
+            font-weight: 300;
+            line-height: 34px;
+        }
+    }
+    &__button {
+        margin-top: 51px;
+        width: 210px;
+        height: 94px;
+    }
+}

@@ -33,13 +33,9 @@
 
 .button-swiper {
     @include button-swiper;
-}
-
-.button-swiper-active {
-    @include button-swiper;
-    background-color: $golden;
-}
-
-.button-swiper-active_prev {
-    transform: rotate(180deg);
+    border: none;
+    &:active,
+    &:hover {
+        background-color: $golden;
+    }
 }
