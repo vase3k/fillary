@@ -1,0 +1,58 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    &__contact-wrapper {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    &__phone {
+        color: $white;
+        font-family: Manrope;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -0.72px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -44px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url('/src/icons/header-phone-icon.svg') no-repeat center / contain;
+            pointer-events: none;
+        }
+    }
+    &__pseudo-link-wrapper {
+        position: relative;
+    }
+    &__pseudo-link {
+        position: absolute;
+        left: -44px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    &__callback {
+        color: $golden;
+        font-family: Onest;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 32px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+    }
+}

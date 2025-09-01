@@ -1,11 +1,11 @@
 @use '/src/sass/base/mixins.scss' as *;
 @use '/src/sass/base/variables.scss' as *;
 
-.text-1 {
+.text-30 {
     @include text;
 }
 
-.text-2 {
+.text-22 {
     @include text;
     color: $blue-light;
     font-size: 22px;
@@ -13,7 +13,7 @@
     line-height: 34px;
 }
 
-.text-3 {
+.text-14 {
     @include text;
     color: $lavender;
     font-size: 14px;

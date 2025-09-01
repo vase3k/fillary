@@ -18,11 +18,11 @@
     background: $amber;
 }
 
-.button-telegram {
+.button-social {
     @include button-circle;
 }
 
-.button-telegram-active {
+.button-social_active {
     @include button-circle;
     border: none;
     background-color: $amber;
@@ -30,6 +30,7 @@
 
 .button-menu-burger {
     @include button-circle;
+    background-color: $amber;
 }
 
 .button-swiper {

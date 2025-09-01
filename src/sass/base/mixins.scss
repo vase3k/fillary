@@ -35,6 +35,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
+    border: none;
+    cursor: pointer;
 }
 
 @mixin button-reserve {
@@ -55,6 +57,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
+    background-color: unset;
+    cursor: pointer;
 }
 
 @mixin button-circle {
@@ -64,7 +68,8 @@
     width: 70px;
     height: 70px;
     border-radius: 100%;
-    background-color: $amber;
+    border: 2px solid $amber;
+    cursor: pointer;
 }
 
 @mixin button-swiper {

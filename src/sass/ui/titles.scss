@@ -1,23 +1,23 @@
 @use '/src/sass/base/mixins.scss' as *;
 @use '/src/sass/base/variables.scss' as *;
 
-.title-1 {
+.title-108 {
     @include title;
 }
 
-.title-2 {
+.title-59 {
     @include title;
     font-size: 59px;
     line-height: 70px;
 }
 
-.title-3 {
+.title-40 {
     @include title;
     font-size: 40px;
     line-height: 50px;
 }
 
-.title-4 {
+.title-18 {
     @include title;
     color: $golden;
     font-size: 18px;
