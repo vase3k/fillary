@@ -3,7 +3,6 @@
 
 .events {
     padding-top: 59px;
-    padding-bottom: 195px;
     background: linear-gradient(to bottom, $dark 0%, transparent 21%),
         linear-gradient(to top, $dark 0%, transparent 21%),
         linear-gradient(to left, $dark 0%, transparent 21%),
@@ -40,13 +39,17 @@
 
     &__line-bg {
         position: absolute;
-        bottom: -1256px;
-        right: -735px;
+        top: 564px;
+        right: 50%;
         height: 3911px;
         width: 976px;
-        transform: rotate(28deg);
+        transform: translate(1400px, -2376px) rotate(16deg);
         background: url('/src/img/events/events-line-bottom.png') center/ contain
             no-repeat;
         z-index: -1;
+    }
+
+    &__slider {
+        margin-top: 195px;
     }
 }
