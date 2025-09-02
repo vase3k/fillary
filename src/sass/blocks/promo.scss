@@ -6,8 +6,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, transparent 21%),
-        linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 21%),
+    background: linear-gradient(to bottom, $dark 0%, transparent 21%),
+        linear-gradient(to top, $dark 0%, transparent 21%),
         url('/src/img/promo/promo-bg-blur.png') center/1920px no-repeat;
 
     &__title {

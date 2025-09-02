@@ -1,0 +1,52 @@
+@use '/src/sass/base/variables.scss' as *;
+@use '/src/sass/base/mixins.scss' as *;
+
+.events {
+    padding-top: 59px;
+    padding-bottom: 195px;
+    background: linear-gradient(to bottom, $dark 0%, transparent 21%),
+        linear-gradient(to top, $dark 0%, transparent 21%),
+        linear-gradient(to left, $dark 0%, transparent 21%),
+        linear-gradient(to right, $dark 0%, transparent 21%),
+        url('/src/img/events/events-bg.png') center / 1920px no-repeat;
+
+    .container {
+        background: url('/src/img/events/events-line-top.png') center 194px / 2043px
+            no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
+    &__title {
+        margin-top: 78px;
+        text-align: center;
+    }
+
+    &__wrapper {
+        margin-top: 78px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 424px;
+        border-radius: 35px;
+        overflow: hidden;
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__line-bg {
+        position: absolute;
+        bottom: -1256px;
+        right: -735px;
+        height: 3911px;
+        width: 976px;
+        transform: rotate(28deg);
+        background: url('/src/img/events/events-line-bottom.png') center/ contain
+            no-repeat;
+        z-index: -1;
+    }
+}

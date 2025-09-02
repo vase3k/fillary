@@ -6,7 +6,7 @@
     padding-top: 20px;
     padding-bottom: 289px;
     position: relative;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 21%),
+    background: linear-gradient(to top, $dark 0%, transparent 21%),
         url('/src/img/intro/intro-bg.png') bottom right/cover no-repeat;
     &__wrapper {
         margin-top: 225px;
