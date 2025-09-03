@@ -9,6 +9,7 @@ import legacy from '@vitejs/plugin-legacy';
 import { webfontDownload } from 'vite-plugin-webfont-dl';
 import { meta } from 'vite-plugin-meta-tags';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const baseName = `/${path.basename(process.cwd())}/`;
@@ -42,10 +43,24 @@ export default defineConfig({
             img: '/images/meta-og-image.jpg',
             color: '#ffffff',
         }),
-        ViteImageOptimizer({
-            png: { quality: 80 },
-            jpeg: { quality: 75 },
+        vitePluginFaviconsInject('src/favicon/favicon.png', {
+            background: '#423ca4',
+            icons: {
+                android: true,
+                appleIcon: true,
+                appleStartup: false,
+                favicons: true,
+                windows: false,
+                yandex: true,
+            },
+            appName: 'Fillary',
+            appShortName: 'Fillary',
+            appDescription: 'Fillary karaoke',
         }),
+        // ViteImageOptimizer({
+        //     png: { quality: 80 },
+        //     jpeg: { quality: 75 },
+        // }),
         //createFoldersPlugin(),
         //createFiles(),
         // legacy({

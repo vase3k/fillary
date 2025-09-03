@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "just-validate": "^4.3.0",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "vite-plugin-favicons-inject": "^2.2.0"
   }
 }
