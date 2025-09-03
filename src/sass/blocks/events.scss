@@ -7,7 +7,7 @@
         linear-gradient(to top, $dark 0%, transparent 21%),
         linear-gradient(to left, $dark 0%, transparent 21%),
         linear-gradient(to right, $dark 0%, transparent 21%),
-        url('/src/img/events/events-bg.png') center / 1920px no-repeat;
+        url('/src/img/events/events-bg.png') center -216px / 1920px no-repeat;
 
     .container {
         background: url('/src/img/events/events-line-top.png') center 194px / 2043px
@@ -49,7 +49,53 @@
         z-index: -1;
     }
 
-    &__slider {
+    &__hall {
         margin-top: 195px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 20px;
+    }
+
+    &__swiper {
+        border-radius: 55px;
+        height: 700px;
+        .swiper-slide {
+            max-width: 100%;
+        }
+        .custom-next {
+            left: unset;
+            top: unset;
+            right: 65px;
+            bottom: 15px;
+        }
+
+        .custom-prev {
+            left: unset;
+            top: unset;
+            right: 150px;
+            bottom: 15px;
+        }
+    }
+
+    &__hall-wrapper {
+        margin-top: 58px;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 1415px;
+        margin-left: 40px;
+        gap: 20px;
+    }
+
+    &__title {
+        text-align: left;
+    }
+    &__button {
+        width: 210px;
+        height: 94px;
+        margin-left: 40px;
+        margin-top: 20px;
+        margin-right: 20px;
     }
 }
