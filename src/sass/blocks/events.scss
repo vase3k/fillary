@@ -7,7 +7,8 @@
         linear-gradient(to top, $dark 0%, transparent 21%),
         linear-gradient(to left, $dark 0%, transparent 21%),
         linear-gradient(to right, $dark 0%, transparent 21%),
-        url('/src/img/events/events-bg.png') center -216px / 1920px no-repeat;
+        url('/src/img/events/events-bg.png') center -216px / 1920px no-repeat,
+        url('/src/img/promo/promo-bg-blur.png') center 2201px / auto no-repeat;
 
     .container {
         background: url('/src/img/events/events-line-top.png') center 194px / 2043px
