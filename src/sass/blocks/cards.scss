@@ -5,12 +5,13 @@
     text-align: center;
 
     .container {
+        padding-bottom: 188px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: url('/src/img/cards/cards__bg.png') no-repeat;
-        background-position: -552px -35px;
-        background-size: 3008px 1220px;
+        background: url('/src/img/cards/cards__bg.png') no-repeat -552px -35px / 3008px
+                1220px,
+            url('/src/img/cards/cards__bg-center.png') no-repeat center 1264px;
     }
     &__subtitle {
         max-width: 1183px;
@@ -40,5 +41,72 @@
         margin-top: 71px;
         width: 270px;
         height: 94px;
+    }
+
+    &__descr {
+        width: 803px;
+        margin-top: 20px;
+    }
+
+    &__subtext {
+        margin-top: 30px;
+    }
+
+    &__title_margin {
+        margin-top: 143px;
+    }
+
+    &__wrapper_large {
+        gap: 14px;
+        .cards__item {
+            width: 577px;
+            border-radius: 35px;
+            background-color: $navy-dark;
+            padding: 20px 20px 77px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-img-wrap {
+                position: relative;
+                img {
+                    border-radius: 15px;
+                }
+                &::after {
+                    content: '';
+                    width: 49px;
+                    height: 52px;
+                    background-image: url('/src/img/cards/cards__item_star.png');
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                }
+            }
+            &-text-middle {
+                padding-top: 75px;
+                color: $white;
+                text-align: center;
+                font-family: Forum;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+                text-transform: uppercase;
+                span {
+                    color: $golden;
+                }
+            }
+            &-text-bottom {
+                margin-top: 30px;
+                color: $blue-light;
+                text-align: center;
+                font-family: Onest;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 34px;
+            }
+        }
     }
 }
