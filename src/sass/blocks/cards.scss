@@ -1,0 +1,44 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.cards {
+    margin-top: 221px;
+    text-align: center;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url('/src/img/cards/cards__bg.png') no-repeat;
+        background-position: -552px -35px;
+        background-size: 3008px 1220px;
+    }
+    &__subtitle {
+        max-width: 1183px;
+        margin-top: 20px;
+    }
+
+    &__wrapper {
+        margin-top: 75px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 21px;
+        padding: 0 40px;
+    }
+
+    &__item {
+        border-radius: 35px;
+        overflow: hidden;
+        width: 425px;
+        height: 755px;
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__button {
+        margin-top: 71px;
+        width: 270px;
+        height: 94px;
+    }
+}

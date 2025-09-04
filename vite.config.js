@@ -103,7 +103,6 @@ function createFoldersPlugin(
                 const fullPath = path.join(rootDir, folder);
                 if (!fs.existsSync(fullPath)) {
                     fs.mkdirSync(fullPath, { recursive: true });
-                    console.log(`Created folder: ${fullPath}`);
                 }
             });
         },
@@ -117,12 +116,12 @@ function createFiles() {
         apply: 'serve',
         configResolved(config) {
             const rootDir = config.root || process.cwd();
-
             const makeFile = (filePath, content = '') => {
                 const dir = dirname(filePath);
                 if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
                 if (!existsSync(filePath)) writeFileSync(filePath, content);
             };
+
             makeFile(
                 join(rootDir, 'src/sass/utils/validations.scss'),
                 `@use '/src/sass/base/variables.scss' as *;
